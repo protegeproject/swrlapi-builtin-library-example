@@ -23,7 +23,7 @@ The JAR containing the built-in library must first be placed in Protégé's clas
 that the built-ins it defines can be resolved.
 A Protégé installation contains a plugin directory that can be used for this purpose.
 The name of the directory is operating system dependent.
-On OS X this subdirectory` is called ```./Contents/Java/plugins/```.
+On OS X this subdirectory is called ```./Contents/Java/plugins/```.
 So a complete plugin directory path might be something like
 ```/Applications/Protege-5.0.0/Protégé.app/Contents/Java/plugins/```.
 
