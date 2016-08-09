@@ -3,12 +3,11 @@
 This project provides a simple example of a Java application that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s [Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
 to create a [SWRL built-in](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ) library. 
 
-You can import this project into your favourite IDE using its Maven-based project creation facility.
-
 This example library defines a simple built-in called ```stringsEqual``` that accepts two string argument. 
 It returns ```true``` if both arguments are equal, and ```false``` otherwise. 
+Instructions for building this library are outlined below.
 
-The ```./src/main/resources/owl``` directory contains an OWL ontology in a file called ```StringsBuiltInLibrary.owl```
+The ```./src/main/resources/owl``` directory contains an OWL file called ```StringsBuiltInLibrary.owl```
 that [defines this built-in](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge#defining-built-ins-in-owl) so that it can be used by importing ontologies. 
 An example importing ontology called ```StringsUser.owl``` defines a simple SQWRL query that uses the
 ```stringsEqual``` built-in to compare two strings.
@@ -24,7 +23,7 @@ The JAR containing the built-in library must first be placed in Protégé's clas
 that the built-ins it defines can be resolved.
 A Protégé installation contains a plugin directory that can be used for this purpose.
 The name of the directory is operating system dependent.
-On OS X this subdirectory` is called ```./Contents/Java/plugins/'.
+On OS X this subdirectory` is called ```./Contents/Java/plugins/```.
 So a complete plugin directory path might be something like
 ```/Applications/Protege-5.0.0/Protégé.app/Contents/Java/plugins/```.
 Copy the JAR to the plugins directory and then open Protégé 5.
