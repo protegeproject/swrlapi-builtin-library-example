@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://swrl.stanford.edu/ontologies/examples/StringsBuiltInLibraryUser.owl"
+     xml:base="http://swrl.stanford.edu/ontologies/examples/StringsBuiltInLibraryUser.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:strings="http://swrl.stanford.edu/ontologies/built-ins/5.0.0/strings.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://swrl.stanford.edu/ontologies/examples/StringsBuiltInLibraryUser.owl">
+        <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/5.0.0/strings.owl"/>
+    </owl:Ontology>
+
+</rdf:RDF>
