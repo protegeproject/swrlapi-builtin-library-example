@@ -4,12 +4,12 @@
   <parent>
     <groupId>edu.stanford.swrl</groupId>
     <artifactId>swrlapi-parent</artifactId>
-    <version>1.1.2-SNAPSHOT</version>
+    <version>1.1.3-SNAPSHOT</version>
   </parent>
 
   <groupId>edu.stanford.swrl</groupId>
   <artifactId>swrlapi-builtins-library-example</artifactId>
-  <version>1.1.2-SNAPSHOT</version>
+  <version>1.1.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>SWRLAPI Built-ins Library Example</name>
@@ -17,8 +17,8 @@
 
   <properties>
 
-    <swrlapi.version>1.1.2-SNAPSHOT</swrlapi.version>
-    <swrlapi.drools.version>1.1.2-SNAPSHOT</swrlapi.drools.version>
+    <swrlapi.version>1.1.3-SNAPSHOT</swrlapi.version>
+    <swrlapi.drools.version>1.1.3-SNAPSHOT</swrlapi.drools.version>
 
   </properties>
 
@@ -67,20 +67,6 @@
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-assembly-plugin</artifactId>
-	<executions>
-	  <execution>
-	    <id>make-assembly</id>
-	    <phase>package</phase>
-	    <goals>
-              <goal>single</goal>
-	    </goals>
-	  </execution>
-	</executions>
       </plugin>
 
       <plugin>
