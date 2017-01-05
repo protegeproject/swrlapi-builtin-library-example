@@ -1,7 +1,8 @@
 #SWRLAPI Built-in Library Example
 
-This project provides a minimal example of a project that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s [Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
-to create a [SWRL built-in](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ) library. 
+This project provides a minimal example of a project that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s 
+[Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
+to create a [SWRL built-in library](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ). 
 It can be used as a starting point for developers who wish to create their own built-in library.
 
 This example library defines a single built-in called ```stringsEqual``` that accepts two string argument. 
