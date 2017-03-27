@@ -4,17 +4,12 @@ import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-import org.semanticweb.owlapi.model.OWLOntologyIRIMapper;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.factory.SWRLAPIFactory;
 import org.swrlapi.parser.SWRLParseException;
 import org.swrlapi.sqwrl.SQWRLQueryEngine;
 import org.swrlapi.sqwrl.SQWRLResult;
 import org.swrlapi.sqwrl.exceptions.SQWRLException;
-
-import java.util.Collections;
-import java.util.Set;
 
 public class SWRLAPIBuiltInExample
 {
@@ -25,13 +20,13 @@ public class SWRLAPIBuiltInExample
       OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
       OWLOntology ontology = ontologyManager.createOntology();
 
-      Set<OWLOntologyIRIMapper> mappers = Collections.singleton(
-        new SimpleIRIMapper(IRI.create("http://www.semanticweb.org/dell/ontologies/2016/6/untitled-ontology-42"),
-          IRI.create("file:///Users/moconnor/workspace/common/swrl/examples/import-example/MyBuiltIns.owl")));
-      ontologyManager.setIRIMappers(mappers);
-
       // Create SQWRL query engine using the SWRLAPI
       SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
+
+      queryEngine
+        .addSWRLBuiltIn(IRI.create("http://swrl.stanford.edu/ontologies/built-ins/5.1.0/strings.owl#stringsEqual"));
+      queryEngine.getSWRLAPIOWLOntology().getIRIResolver()
+        .setPrefix("strings", "http://swrl.stanford.edu/ontologies/built-ins/5.1.0/strings.owl#");
 
       // Create and execute a SQWRL query using the SWRLAPI
       SQWRLResult result = queryEngine

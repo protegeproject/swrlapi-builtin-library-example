@@ -5,8 +5,8 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns="http://swrl.stanford.edu/ontologies/built-ins/5.0.0/strings.owl#"
-  xml:base="http://swrl.stanford.edu/ontologies/built-ins/5.0.0/strings.owl">
+    xmlns="http://swrl.stanford.edu/ontologies/built-ins/5.1.0/strings.owl#"
+  xml:base="http://swrl.stanford.edu/ontologies/built-ins/5.1.0/strings.owl">
   <owl:Ontology rdf:about=""/>
   <swrl:Builtin rdf:ID="stringsEqual"/>
 

@@ -7,6 +7,7 @@ It can be used as a starting point for developers who wish to create their own b
 
 This example library defines a single built-in called ```stringsEqual``` that accepts two string argument. 
 It returns ```true``` if both arguments are equal, and ```false``` otherwise. 
+
 Instructions for building and installing this library are outlined below.
 
 The ```./src/main/resources/owl``` directory contains an OWL file called ```StringsBuiltInLibrary.owl```
