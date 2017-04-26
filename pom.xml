@@ -4,12 +4,12 @@
   <parent>
     <groupId>edu.stanford.swrl</groupId>
     <artifactId>swrlapi-parent</artifactId>
-    <version>1.1.2</version>
+    <version>2.0.1-SNAPSHOT</version>
   </parent>
 
   <groupId>edu.stanford.swrl</groupId>
   <artifactId>swrlapi-builtins-library-example</artifactId>
-  <version>1.1.2</version>
+  <version>2.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>SWRLAPI Built-ins Library Example</name>
@@ -17,8 +17,8 @@
 
   <properties>
 
-    <swrlapi.version>1.1.2</swrlapi.version>
-    <swrlapi.drools.version>1.1.2</swrlapi.drools.version>
+    <swrlapi.version>2.0.1-SNAPSHOT</swrlapi.version>
+    <swrlapi.drools.version>2.0.1-SNAPSHOT</swrlapi.drools.version>
 
   </properties>
 
