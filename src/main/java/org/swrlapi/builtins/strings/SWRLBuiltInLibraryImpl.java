@@ -4,13 +4,24 @@ import org.swrlapi.builtins.AbstractSWRLBuiltInLibrary;
 import org.swrlapi.builtins.arguments.SWRLBuiltInArgument;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
 {
-  public SWRLBuiltInLibraryImpl() { super("StringsBuiltIns"); }
+  private static final String PREFIX = "strings";
 
-  @Override public void reset() { }
+  private static final String NAMESPACE = "http://swrl.stanford.edu/ontologies/built-ins/5.2.0/strings.owl#";
+
+  private static final String[] BUILT_IN_NAMES = { "stringsEqual" };
+
+  public SWRLBuiltInLibraryImpl()
+  {
+    super(PREFIX, NAMESPACE, new HashSet<>(Arrays.asList(BUILT_IN_NAMES)));
+  }
+
+  @Override public void reset () { }
 
   public boolean stringsEqual(List<SWRLBuiltInArgument> arguments) throws SWRLBuiltInException
   {
@@ -23,5 +34,4 @@ public class SWRLBuiltInLibraryImpl extends AbstractSWRLBuiltInLibrary
 
     return argument1.equals(argument2);
   }
-
 }

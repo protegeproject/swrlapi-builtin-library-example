@@ -19,6 +19,8 @@ target/*
 *.pyc
 .DS_Store
 
+swrl-builtins
+
 pom.xml.releaseBackup 
 release.properties
 pom.xml.versionsBackup

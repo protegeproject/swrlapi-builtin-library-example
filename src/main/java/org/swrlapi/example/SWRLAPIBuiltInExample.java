@@ -1,7 +1,6 @@
 package org.swrlapi.example;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
@@ -10,6 +9,8 @@ import org.swrlapi.parser.SWRLParseException;
 import org.swrlapi.sqwrl.SQWRLQueryEngine;
 import org.swrlapi.sqwrl.SQWRLResult;
 import org.swrlapi.sqwrl.exceptions.SQWRLException;
+
+import java.io.File;
 
 public class SWRLAPIBuiltInExample
 {
@@ -23,14 +24,11 @@ public class SWRLAPIBuiltInExample
       // Create SQWRL query engine using the SWRLAPI
       SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
 
-      queryEngine
-        .addSWRLBuiltIn(IRI.create("http://swrl.stanford.edu/ontologies/built-ins/5.1.0/strings.owl#stringsEqual"));
-      queryEngine.getSWRLAPIOWLOntology().getIRIResolver()
-        .setPrefix("strings", "http://swrl.stanford.edu/ontologies/built-ins/5.1.0/strings.owl#");
+      queryEngine.loadExternalSWRLBuiltInLibraries(new File("./swrl-builtins/"));
 
       // Create and execute a SQWRL query using the SWRLAPI
       SQWRLResult result = queryEngine
-        .runSQWRLQuery("q1", "strings:stringEqual(\"a\", \"a\") -> sqwrl:select(\"Yes!\")");
+        .runSQWRLQuery("q1", "strings:stringsEqual(\"a\", \"a\") -> sqwrl:select(\"Yes!\")");
 
       // Print the result
       if (result.next())
