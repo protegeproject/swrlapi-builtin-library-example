@@ -20,6 +20,8 @@
     <swrlapi.version>2.0.1-SNAPSHOT</swrlapi.version>
     <swrlapi.drools.version>2.0.1-SNAPSHOT</swrlapi.drools.version>
 
+    <swrl.builtins.directory>${basedir}/swrl-builtins</swrl.builtins.directory>
+
   </properties>
 
   <scm>
@@ -69,18 +71,32 @@
         <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
 
+ <plugin>
+    <artifactId>maven-clean-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+    <version>3.0.0</version>
+    <configuration>
+      <filesets>
+        <fileset>
+          <directory>${swrl.builtins.directory}</directory>
+        </fileset>
+      </filesets>
+    </configuration>
+  </plugin>
+
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
        <artifactId>maven-resources-plugin</artifactId>
        <version>3.0.2</version>
        <executions>
          <execution>
            <id>copy-resources</id>
-           <phase>validate</phase>
+           <phase>verify</phase>
            <goals>
              <goal>copy-resources</goal>
            </goals>
            <configuration>
-             <outputDirectory>${basedir}/swrl-builtins/strings</outputDirectory>
+             <outputDirectory>${swrl.builtins.directory}/strings</outputDirectory>
              <resources>          
                <resource>
                  <directory>${basedir}/target</directory>
