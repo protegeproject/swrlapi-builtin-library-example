@@ -61,15 +61,20 @@ Build it with Maven:
 
 On build completion, your local Maven repository will contain generated ```swrlapi-builtin-library-example-${version}-jar-with-dependencies.jar```.
 The Maven build process also creates a sub-directory called ```./swrl-builtins/strings``` and copies the generated
-JAR to this directory. This directory can be supplied to an application where the built-in library it defines can be loaded.
+JAR to this directory. 
+
+### Running the Example Application
+
+
+The path of the built-in directory can be supplied to the example application which loads the built-in library from the JAR.
 
 To run the example application:
 
-   mvn exec:java
+    mvn exec:java
 
-Alternatively, execute the application as follows:
+Alternatively, execute the sample application as follows:
 
-   java -jar target/swrlapi-builtin-library-example-${version}-jar-with-dependencies.jar ./swrl-builtins
+    java -jar target/swrlapi-builtin-library-example-${version}-jar-with-dependencies.jar ./swrl-builtins
 
 #### Questions
 
