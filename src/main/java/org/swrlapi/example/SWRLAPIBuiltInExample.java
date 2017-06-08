@@ -16,6 +16,12 @@ public class SWRLAPIBuiltInExample
 {
   public static void main(String[] args)
   {
+    if (args.length != 1)
+      Usage();
+
+    String swrlBuiltInDirectoryName = args[0];
+    File swrlBuiltInDirectory = new File(swrlBuiltInDirectoryName);
+
     try {
       // Create an empty OWL ontology using the OWLAPI
       OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
@@ -24,7 +30,7 @@ public class SWRLAPIBuiltInExample
       // Create SQWRL query engine using the SWRLAPI
       SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
 
-      queryEngine.loadExternalSWRLBuiltInLibraries(new File("./swrl-builtins/"));
+      queryEngine.loadExternalSWRLBuiltInLibraries(swrlBuiltInDirectory);
 
       // Create and execute a SQWRL query using the SWRLAPI
       SQWRLResult result = queryEngine
@@ -47,5 +53,11 @@ public class SWRLAPIBuiltInExample
       System.err.println("Error starting application: " + e.getMessage());
       System.exit(-1);
     }
+  }
+
+  private static void Usage()
+  {
+    System.err.println("Usage: " + SWRLAPIBuiltInExample.class.getName() + " <SWRL Built-in Directory>");
+    System.exit(1);
   }
 }

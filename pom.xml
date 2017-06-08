@@ -71,43 +71,41 @@
         <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
 
- <plugin>
-    <artifactId>maven-clean-plugin</artifactId>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
         <groupId>org.apache.maven.plugins</groupId>
-    <version>3.0.0</version>
-    <configuration>
-      <filesets>
-        <fileset>
-          <directory>${swrl.builtins.directory}</directory>
-        </fileset>
-      </filesets>
-    </configuration>
-  </plugin>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${swrl.builtins.directory}</directory>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-       <artifactId>maven-resources-plugin</artifactId>
-       <version>3.0.2</version>
-       <executions>
-         <execution>
-           <id>copy-resources</id>
-           <phase>verify</phase>
-           <goals>
-             <goal>copy-resources</goal>
-           </goals>
-           <configuration>
-             <outputDirectory>${swrl.builtins.directory}/strings</outputDirectory>
-             <resources>          
-               <resource>
-                 <directory>${basedir}/target</directory>
-                 <includes>
-                   <include>*.jar</include>
-                 </includes>
-               </resource>
-             </resources>              
-           </configuration>            
-         </execution>
-       </executions>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${swrl.builtins.directory}/strings</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>${basedir}/target</directory>
+                  <includes>
+                    <include>*.jar</include>
+                  </includes>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
       </plugin>
 
       <plugin>
@@ -122,6 +120,9 @@
 	</executions>
 	<configuration>
 	  <mainClass>org.swrlapi.example.SWRLAPIBuiltInExample</mainClass>
+          <arguments>
+            <argument>${swrl.builtins.directory}</argument>
+          </arguments>
 	</configuration>
       </plugin>
 
