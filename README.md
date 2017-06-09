@@ -33,17 +33,15 @@ On build completion, your local Maven repository will contain generated ```swrla
 
 ### Using this Built-in Library in Protégé 5
 
-The JAR containing the built-in library must first be placed in Protégé's SWRL built-ins library directory so
-that the library can be loaded.
 A Protégé installation contains a SWRL built-in library directory from which the [SWRLTab Plugin](https://github.com/protegeproject/swrltab-plugin/wiki) loads JARs that contain SWRL built-in libraries.
+The JAR containing the built-in library must first be placed in this directory so that it can be loaded.
 The name of this directory is operating system dependent.
 On OS X this subdirectory is called ```./Contents/Java/plugins/swrl-builtins```.
 A complete SWRL built-ins library directory path might be something like 
 ```/Applications/Protege-5.0.0/Protégé.app/Contents/Java/plugins/swrl-builtins```.
 The SWRLTab plugin looks for the built-ins directory and loads all JARs inside it.
 
-First copy the generate JAR containing the built-in library to the SWRL built-ins directory.
-Then open Protégé 5 and load the ```StringsBuiltInLibraryUser.owl``` ontology.
+After copying the generated JAR SWRL built-ins directory open Protégé 5 and load the ```StringsBuiltInLibraryUser.owl``` ontology.
 If it is not already enabled, Go to the ```Windows->Tabs``` menu item and select the ```SQWRLTab``` item.
 Navigate to the [SQWRLTab](https://github.com/protegeproject/swrlapi/wiki/SQWRLQueryTab) and select
 and execute the SQWRL query that used the ```stringsEqual``` built-in.
