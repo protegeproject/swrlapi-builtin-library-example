@@ -39,7 +39,7 @@ The name of this directory is operating system dependent.
 On OS X this subdirectory is called ```./Contents/Java/plugins/swrl-builtins```.
 A complete SWRL built-ins library directory path might be something like 
 ```/Applications/Protege-5.0.0/Protégé.app/Contents/Java/plugins/swrl-builtins```.
-The SWRLTab plugin looks for the built-ins directory and loads all JARs inside it.
+On startup the SWRLTab plugin looks for the built-ins directory and loads all built-in libraries defined in JAR files in the directory.
 
 After copying the generated JAR SWRL built-ins directory open Protégé 5 and load the ```StringsBuiltInLibraryUser.owl``` ontology.
 If it is not already enabled, Go to the ```Windows->Tabs``` menu item and select the ```SQWRLTab``` item.
