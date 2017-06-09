@@ -8,27 +8,29 @@ It can be used as a starting point for developers who wish to create their own b
 This example library defines a single built-in called ```stringsEqual``` that accepts two string argument. 
 It returns ```true``` if both arguments are equal, and ```false``` otherwise. 
 
-Instructions for building and installing this library are outlined below.
+The ```./src/main/resources/owl``` directory contains an OWL file called ```StringsBuiltInLibraryUser.owl``` that defines
+ a simple SQWRL query that uses the ```stringsEqual``` built-in to compare two strings.
 
 This built-in library can be used in two primary ways:
 
 * Interactively, in the [Protégé 5 ontology editor](http://protege.stanford.edu/)
 * In [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)-based applications
 
+Instructions for building and installing this library are outlined below.
+
 ### Using this Built-in Library in Protégé 5
 
 The JAR containing the built-in library must first be placed in Protégé's SWRL built-ins library directory so
-that the built-in library it defines can be loaded.
-A Protégé installation contains a plugin directory that contains this built-in library directory.
-The name of the plugins directory is operating system dependent.
-On OS X this subdirectory is called ```./Contents/Java/plugins/```.
-The SWRLTab plugin looks for a direct subdirectory called ```swrl-builtins``` and loads all JARs in this directory.
-So a complete SWRL built-ins library directory path might be something like 
+that the library can be loaded.
+A Protégé installation contains a SWRL built-in library directory from which it loads JARs that contain SWRL built-in libraries.
+The name of this directory is operating system dependent.
+On OS X this subdirectory is called ```./Contents/Java/plugins/swrl-builtins```.
+A complete SWRL built-ins library directory path might be something like 
 ```/Applications/Protege-5.0.0/Protégé.app/Contents/Java/plugins/swrl-builtins```.
+The SWRLTab plugin looks for the built-ins directory and loads all JARs inside it.
 
-Copy the generate JAR containing the built-in library to the SWRL built-ins directory and then open Protégé 5.
-
-To run the SQWRL query, open the importing ontology in Protégé.
+Copy the generate JAR containing the built-in library (./target/ to the SWRL built-ins directory and then open Protégé 5.
+To run the SQWRL query, open the ```StringsBuiltInLibraryUser.owl``` ontology in Protégé.
 If it is not already enabled, Go to the ```Windows->Tabs``` menu item and select the ```SQWRLTab``` item.
 Navigate to the [SQWRLTab](https://github.com/protegeproject/swrlapi/wiki/SQWRLQueryTab) and select
 and execute the SQWRL query that used the ```stringsEqual``` built-in.
