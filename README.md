@@ -2,7 +2,8 @@
 
 This project provides a minimal example of a project that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s 
 [Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
-to create a [SWRL built-in library](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ). 
+to create a [SWRL built-in library](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ).
+It also include an example application that loads this built-in library and uses a built-in defined by the library in a SQWRL query.
 It can be used as a starting point for developers who wish to create their own built-in library.
 
 ### Building and Installing
@@ -29,8 +30,6 @@ Build it with Maven:
     mvn clean install
 
 On build completion, your local Maven repository will contain generated ```swrlapi-builtin-library-example-${version}-jar-with-dependencies.jar```.
-The Maven build process also creates a sub-directory called ```./swrl-builtins/strings``` and copies the generated
-JAR to this directory. 
 
 ### Using this Built-in Library in Protégé 5
 
