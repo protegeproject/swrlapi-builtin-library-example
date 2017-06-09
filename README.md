@@ -29,7 +29,9 @@ Build it with Maven:
 
     mvn clean install
 
-On build completion, your local Maven repository will contain generated ```swrlapi-builtin-library-example-${version}-jar-with-dependencies.jar```.
+On build completion, your the target directory will contain a JAR called ```swrlapi-builtin-library-example-${version}.jar```.
+A second JAR containing an example application using the built-in library is also generated, which is called
+```swrlapi-builtin-library-example-${version}-jar-with-dependencies.jar```.
 
 ### Using this Built-in Library in Protégé 5
 
