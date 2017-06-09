@@ -1,4 +1,4 @@
-#SWRLAPI Built-in Library Example
+# SWRLAPI Built-in Library Example
 
 This project provides a minimal example of a project that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s 
 [Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
@@ -59,7 +59,7 @@ can be used to run rules or queries that make use of this built-in.
 The project JAR contains a minimal example SWRLAPI application that illustates how
 an application can load a user-defined built-in library and invoke the built-in from a SQWRL query in an ontology.
 The ```./src/main/resources/owl``` directory contains an example OWL file called ```StringsBuiltInLibraryUser.owl``` that defines
- a simple SQWRL query that uses the ```stringsEqual``` built-in to compare two strings.
+ a simple SQWRL query that uses the ```stringsEqual``` built-in.
 The application loads the built-in library from the JAR, load the ontology containing a SQWRL query, and then executes the query.
 
 To run the example application:
