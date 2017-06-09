@@ -36,7 +36,7 @@ JAR to this directory.
 
 The JAR containing the built-in library must first be placed in Protégé's SWRL built-ins library directory so
 that the library can be loaded.
-A Protégé installation contains a SWRL built-in library directory from which it loads JARs that contain SWRL built-in libraries.
+A Protégé installation contains a SWRL built-in library directory from which the [SWRLTab Plugin](https://github.com/protegeproject/swrltab-plugin/wiki) loads JARs that contain SWRL built-in libraries.
 The name of this directory is operating system dependent.
 On OS X this subdirectory is called ```./Contents/Java/plugins/swrl-builtins```.
 A complete SWRL built-ins library directory path might be something like 
@@ -44,8 +44,7 @@ A complete SWRL built-ins library directory path might be something like
 The SWRLTab plugin looks for the built-ins directory and loads all JARs inside it.
 
 First copy the generate JAR containing the built-in library to the SWRL built-ins directory.
-Then open Protégé 5.
-Then ```StringsBuiltInLibraryUser.owl``` ontology.
+Then open Protégé 5 and load the ```StringsBuiltInLibraryUser.owl``` ontology.
 If it is not already enabled, Go to the ```Windows->Tabs``` menu item and select the ```SQWRLTab``` item.
 Navigate to the [SQWRLTab](https://github.com/protegeproject/swrlapi/wiki/SQWRLQueryTab) and select
 and execute the SQWRL query that used the ```stringsEqual``` built-in.
@@ -57,13 +56,11 @@ The SWRLAPI's [SWRL Rule Engine API](https://github.com/protegeproject/swrlapi/w
 or [SQWRL Query API](https://github.com/protegeproject/swrlapi/wiki#SQWRL_Query_API)
 can be used to run rules or queries that make use of this built-in.
 
-The project JAR also contains a minimal example SWRLAPI application that illustates how
-an application loads a user-defined built-in library and invoke the built-in from a SQWRL query in an ontology.
-The ```./src/main/resources/owl``` directory contains an OWL file called ```StringsBuiltInLibraryUser.owl``` that defines
+The project JAR contains a minimal example SWRLAPI application that illustates how
+an application can load a user-defined built-in library and invoke the built-in from a SQWRL query in an ontology.
+The ```./src/main/resources/owl``` directory contains an example OWL file called ```StringsBuiltInLibraryUser.owl``` that defines
  a simple SQWRL query that uses the ```stringsEqual``` built-in to compare two strings.
-
-The path of the built-in directory is supplied to this example application which then loads the built-in library from
-the JAR, load an ontology containing a SQWRL query, and executes query.
+The application loads the built-in library from the JAR, load the ontology containing a SQWRL query, and then executes the query.
 
 To run the example application:
 
