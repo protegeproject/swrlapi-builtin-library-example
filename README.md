@@ -1,4 +1,4 @@
-#SWRLAPI Built-in Library Example
+# SWRLAPI Built-in Library Example
 
 This project provides a minimal example of a project that uses the [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)'s [Built-in Bridge](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInBridge)
 to create a [SWRL built-in](https://github.com/protegeproject/swrlapi/wiki/SWRLBuiltInFAQ) library. 
@@ -25,7 +25,7 @@ that the built-ins it defines can be resolved.
 A Protégé installation contains a plugin directory that can be used for this purpose.
 The name of the directory is operating system dependent.
 On OS X this subdirectory is called ```./Contents/Java/plugins/```.
-So a complete plugin directory path might be something like ```/Applications/Protege-5.0.0/Protégé.app/Contents/Java/plugins/```.
+So a complete plugin directory path might be something like ```/Applications/Protege-5.5.0/Protégé.app/Contents/Java/plugins/```.
 
 Copy the JAR to the plugins directory and then open Protégé 5.
 
