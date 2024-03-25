@@ -18,16 +18,16 @@ This built-in library can be used in two primary ways:
 * Interactively, in the [Protégé 5 ontology editor](http://protege.stanford.edu/)
 * In [SWRLAPI](https://github.com/protegeproject/swrlapi/wiki)-based applications
 
-### Using this Built-in Library in Protégé 5
+### Using this Built-in Library in Protégé 5.6.2
 
 The JAR containing the built-in library must first be placed in Protégé's class path so
 that the built-ins it defines can be resolved.
 A Protégé installation contains a plugin directory that can be used for this purpose.
 The name of the directory is operating system dependent.
 On OS X this subdirectory is called ```./Contents/Java/plugins/```.
-So a complete plugin directory path might be something like ```/Applications/Protege-5.5.0/Protégé.app/Contents/Java/plugins/```.
+So a complete plugin directory path might be something like ```/Applications/Protege-5.6.2/Protégé.app/Contents/Java/plugins/```.
 
-Copy the JAR to the plugins directory and then open Protégé 5.
+Copy the JAR to the plugins directory and then open Protégé 5.6.2.
 
 To run the SQWRL query, open the importing ontology in Protégé.
 If it is not already enabled, Go to the ```Windows->Tabs``` menu item and select the ```SQWRLTab``` item.
@@ -45,7 +45,7 @@ can then be used to run rules or queries that make use of this built-in.
 
 To build this library you must have the following items installed:
 
-+ [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
++ [Java 17](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 + A tool for checking out a [Git](http://git-scm.com/) repository
 + Apache's [Maven](http://maven.apache.org/index.html)
 
